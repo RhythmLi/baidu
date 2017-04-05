@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小薇学院 task 1</title>
+    <style>
+
+        body,h1,h2,h3,h4,p,ul,li,ol,pre,form,input,textarea,th,td{
+            margin: 0;
+            padding: 0;
+        }
+        body,input,select,textarea{
+            /*font-size: 14px;*/
+            font-family: "MicroSoft YaHei", "sans-serif";
+        }
+        img{
+            border: 0;
+            margin: 0;
+            padding: 0;
+        }
+        .clearfix:before,
+        .clearfix:after{
+            content: '';
+            line-height: 0;
+            height: 0;
+            display: block;
+            visibility: hidden;
+            clear: both;
+        }
+        body{
+            background: #000;
+            padding:0 80px;
+        }
+        .main{
+            background: #ccc;
+            margin: 0 auto;
+        }
+        section{
+            background: #fff;
+            margin: 20px 20px 0;
+            -webkit-box-shadow:  2px 2px 5px ;
+            -moz-box-shadow:  2px 2px  5px ;
+            box-shadow:  2px 2px 5px ;
+            padding: 20px;
+        }
+        header{
+            width: 100%;
+            height: 80px;
+            background: #333;
+
+        }
+        header h1{
+            float: left;
+            line-height: 80px;
+            color: #fff;
+            padding-left: 20px;
+        }
+        header ul {
+            float: right;
+            line-height: 80px;
+        }
+        header  li{
+            float: left;
+            margin: 0 15px;
+        }
+        header  a{
+            color: #fff;
+            text-decoration: none;
+        }
+        header  a:hover{
+            color: #ccc;
+        }
+        /*section公共部分*/
+        h1{
+            line-height: 80px;
+        }
+        h3{
+            font-weight: 400;
+            color: #888;
+        }
+        span{
+            color: #888;
+            line-height: 40px;
+            font-size: 12px;
+        }
+        img{
+            margin: 20px 0;
+        }
+
+        /*section2部分*/
+        #section2 ul{
+            margin: 0 0 30px 30px;
+            list-style: none;
+            line-height: 26px;
+        }
+        /*section3部分*/
+        #section3{
+
+        }
+        #section3 div{
+            display: block;
+            width: 140px;
+            border: 1px solid #ccc;
+            text-align: center;
+            margin: 0 0 20px 60px;
+        }
+        #section3 div img{
+            margin: 0 10px 10px;
+            width: 120px;
+            height: 100px;
+        }
+        #section3 div p{
+            line-height: 40px;
+        }
+        #section4 ol{
+            margin:0 0 20px 40px;
+        }
+        #section4 li{
+            line-height: 26px;
+        }
+
+        #section4 thead{
+            background: #000;
+            color: #fff;
+        }
+        #section4 tfoot{
+            background: #ccc;
+        }
+        #section4 th{
+            width: 500px;
+        }
+        #section4  table{
+            border-right:1px solid #ccc;
+            border-bottom:1px solid #ccc
+        }
+        #section4 table td,th{
+            border-left:1px solid #ccc;
+            border-top:1px solid #ccc
+        }
+        #section5 h4{
+            border-left: 3px solid #ccc;
+            line-height: 40px;
+            padding-left: 10px;
+        }
+        form{
+            margin:30px 0 0 200px;
+        }
+        label.ww{
+            display: inline-block;
+            margin-right: 10px;
+            width: 200px;
+            text-align: right;
+        }
+        form span.cen{
+            margin-left: 210px;
+        }
+        label.repeat{
+            margin-top: 15px;
+        }
+        input[type="radio"]:checked{
+            background: red;
+            /*display: none;*/
+        }
+        .radio {
+            display: inline-block;
+            margin: 10px 0;
+        }
+        .radio label {
+            display: inline-block;
+            cursor: pointer;
+            position: relative;
+            padding-left: 25px;
+            margin-right: 15px;
+            font-size: 13px;
+        }
+
+        .radio label:before {
+            content: "";
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            margin-right: 10px;
+            position: absolute;
+            left: 0;
+            bottom: 1px;
+            background-color: deepskyblue;
+            border: 1px solid #ccc;
+        }
+
+        .radio label:before {
+            border-radius: 8px;
+        }
+
+
+        .radio input[type=radio]{
+            display: none;
+        }
+
+
+        .radio input[type=radio]:checked + label:before {
+            content: "\2022";
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            line-height: 14px;
+        }
+
+        textarea{
+            vertical-align: top;
+        }
+        div.submit{
+            width: 100%;
+            margin-top: 10px;
+        }
+        .submit input{
+            width: 100%;
+            height: 40px;
+            background: blue;
+            color: #fff;
+            border-radius: 10px;
+        }
+        footer{
+            height: 60px;
+            line-height: 60px;
+            color: #fff;
+            text-align: center;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+<div class="main">
+    <header>
+        <h1>网站一级标题</h1>
+        <ul>
+            <li><a href="#section1">导航链接一</a></li>
+            <li><a href="#section2">导航链接二</a></li>
+            <li><a href="#section3">导航链接三</a></li>
+            <li><a href="#section4">导航链接四</a></li>
+        </ul>
+    </header>
+    <section id="section1">
+        <h1>文章一级标题</h1>
+        <h3>文章二级标题</h3>
+        <span>文章作者 文章发表时间</span>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的你谁娶了多愁善感的你谁看了你的日记曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的你谁娶了多愁善感的你谁看了你的日记<br/></p>
+        <p>曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片 <a href="www.baidu.com">进入到百度</a>才想起同桌的
+            <br/></p>
+        <p>曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的</p>
+        <img src="img/nuobeier.jpg"/>
+        <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的你谁娶了多愁善感的你谁看了你的日记曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的你谁娶了多愁善感的你谁看了你的日记<br/></p>
+        <p>曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片 <a href="www.baidu.com">进入到百度</a>才想起同桌的
+            <br/></p>
+        <p>曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的</p>
+    </section>
+    <section id="section2">
+        <h1>另一篇文章一级标题</h1>
+        <h3>文章二级标题</h3>
+        <span>文章作者 文章发表时间</span>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的你谁娶了多愁善感的你谁看了你的日记曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的你谁娶了多愁善感的你谁看了你的日记<br/></p>
+        <p>曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片 <a href="www.baidu.com">进入到百度</a>才想起同桌的
+            <br/></p>
+        <p>曾经最爱哭的你老师们都已想不起猜不出问题的你我也是偶然翻相片才想起同桌的</p>
+        <img src="img/nuobeier.jpg"/>
+        <ul>
+            <li>列表项目一</li>
+            <li>列表项目二</li>
+            <li>列表项目三</li>
+        </ul>
+    </section>
+    <section id="section3">
+        <h1>图片</h1>
+        <div>
+            <p>好看的图片</p>
+            <img src="img/nuobeier.jpg"/>
+        </div>
+        <div>
+            <p>好看的图片</p>
+            <img src="img/nuobeier.jpg"/>
+        </div>
+        <div>
+            <p>好看的图片</p>
+            <img src="img/nuobeier.jpg"/>
+        </div>
+        <div>
+            <p>好看的图片</p>
+            <img src="img/nuobeier.jpg"/>
+        </div>
+        <div>
+            <p>好看的图片</p>
+            <img src="img/nuobeier.jpg"/>
+        </div>
+        <div>
+            <p>好看的图片</p>
+            <img src="img/nuobeier.jpg"/>
+        </div>
+        <div>
+            <p>好看的图片</p>
+            <img src="img/nuobeier.jpg"/>
+        </div>
+    </section>
+    <section id="section4">
+        <h1>最后一篇文章一级标题</h1>
+        <h3>文章二级标题</h3>
+        <span>文章作者 文章发表时间</span>
+        <ol>
+            <li>排名1</li>
+            <li>排名2</li>
+            <li>排名3</li>
+        </ol>
+        <p>下面是一个表格，给表格添加了一个border="1"好让你看出是一个表格</p>
+        <table border="1" cellpadding="2" cellspacing="0">
+            <thead>
+            <tr>
+                <th>表头</th>
+                <th>表头</th>
+                <th>表头</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>内容内容</td>
+                <td>内容内容</td>
+                <td><a href="javascript:viod(0)">操作</a></td>
+            </tr>
+            <tr>
+                <td>内容内容</td>
+                <td>内容内容</td>
+                <td><a href="javascript:viod(0)">操作</a></td>
+            </tr>
+            <tr>
+                <td>内容内容</td>
+                <td>内容内容</td>
+                <td><a href="javascript:viod(0)">操作</a></td>
+            </tr>
+            <tr>
+                <td>内容内容</td>
+                <td>内容内容</td>
+                <td><a href="javascript:viod(0)">操作</a></td>
+            </tr>
+            </tbody>
+            <tfoot>
+            <tr>
+                <td>总计</td>
+                <td colspan="2">1000</td>
+            </tr>
+            </tfoot>
+
+
+        </table>
+    </section>
+    <section id="section5">
+        <h4>这里以后是一个侧栏，这是侧栏的标题</h4>
+        <form action="">
+            <label class="ww">请输入邮箱地址</label><input type="text"
+                                                    placeholder="这是一个文本输入框" align="left"  name="name"/><br/>
+            <span class="cen">邮箱地址请按要求格式输入</span><br/>
+            <label class="ww">请输入密码</label><input type="password" value="123456" align="left"  name="name"/><br/>
+            <label class="repeat ww">请重复输入密码</label><input type="password"
+                                                           value="123456"/><br/>
+            <span class="cen">密码请为6-16位英文数字</span><br/>
+            <label  class="ww">性别</label>
+            <div class="radio">
+                <input id="male" type="radio" name="gender" value="male"
+                       checked="checked">
+                <label for="male">男</label>
+                <input id="female" type="radio" name="gender" value="female">
+                <label for="female">女</label>
+            </div>
+            <br/>
+            <label class="ww">城市</label>
+            <select>
+                <option>北京</option>
+                <option>上海</option>
+                <option>杭州</option>
+            </select><br/>
+            <label class="ww">爱好</label>
+            <input type="checkbox"/><span>运动</span>
+            <input type="checkbox"/><span>艺术</span>
+            <input type="checkbox"/><span>科学</span><br/>
+            <label class="ww">个人描述</label>
+                <textarea name="miaoshu"  cols="100"
+                          rows="6">请输入自我描述</textarea><br/>
+
+        </form>
+        <div class="submit"> <input type="submit" value="确认提交"/><br/></div>
+    </section>
+
+</div>
+<footer> <p>版权所有&copy</p></footer>
+</body>
+</html>

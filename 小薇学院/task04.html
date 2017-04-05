@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>小薇学院 task04</title>
+    <style>
+        .par{
+            width: 400px;
+            height: 200px;
+            background: #ccc;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            -webkit-transform: translate(-50%,-50%);
+            -moz-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+            -o-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
+        }
+        .top ,.bottom{
+            display: inline-block;
+            border: 25px solid #fc0;
+        }
+        .top{
+            position: absolute;
+            top: 0;
+            left: 0;
+            border-radius: 0 0 50px 0;
+        }
+        .bottom{
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            border-radius: 50px 0 0 0;
+        }
+    </style>
+</head>
+<body>
+<div class="par">
+    <div class="top"></div>
+    <div class="bottom"></div>
+</div>
+</body>
+</html>
